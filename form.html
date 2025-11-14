@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COFEE HOPPING— Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav-fixed">
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="logo">
+          <span class="logo-mark">☕</span>
+          <span class="logo-text">Coffee Hopping</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Coffee Places</a>
+        <a href="form.html" class="nav-link active">Login</a>       
+    </nav>
+  </header>
+
+  <main class="page login-page">
+    <section class="login-card">
+      <h2>Login</h2>
+
+      <form id="loginForm" onsubmit="return handleLogin(event)">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="••••••••" required>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Sign In</button>
+          <button type="button" class="btn btn-ghost" onclick="clearLogin()">Clear</button>
+        </div>
+      </form>
+
+      <p id="loginResult" class="result-text"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
